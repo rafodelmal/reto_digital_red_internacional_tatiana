@@ -39,11 +39,11 @@
     "devDependencies": {
         "@angular-devkit/build-angular": "0.1100.4",
         "@angular/cli": "^11.2.3",
-<<<<<<< HEAD
+
         "@angular/compiler-cli": "11.0.4",
-=======
-        "@angular/compiler-cli": "11.2.4",
->>>>>>> 17a8d86d66cb0bc35c82860cd6dcb34ffffe8f81
+
+
+
         "@types/jasmine": "3.6.2",
         "@types/node": "14.14.13",
         "codelyzer": "6.0.1",
