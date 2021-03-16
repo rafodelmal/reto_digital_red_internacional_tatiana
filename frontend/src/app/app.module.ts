@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarinexComponent } from './shared/navbarinex/navbarinex.component';
+import { GuestComponent } from './layouts/guest/guest.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { NavbarinexComponent } from './shared/navbarinex/navbarinex.component';
     AppComponent,
     AdminLayoutComponent,
     LoginComponent,
-    NavbarinexComponent
+    NavbarinexComponent,
+    GuestComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
