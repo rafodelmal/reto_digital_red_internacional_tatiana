@@ -15,6 +15,7 @@ export const ROUTES: RouteInfo[] = [
     { path: '/admin/icons', title: 'Icons',  icon:'pe-7s-science', class: '' },
     { path: '/admin/maps', title: 'Maps',  icon:'pe-7s-map-marker', class: '' },
     { path: '/admin/notifications', title: 'Notifications',  icon:'pe-7s-bell', class: '' },
+    { path: '/admin/calculadora', title: 'Calculadora',  icon:'pe-7s-calculator', class: '' },
     { path: '/admin/upgrade', title: 'Upgrade to PRO',  icon:'pe-7s-rocket', class: 'active-pro' },
 ];
 

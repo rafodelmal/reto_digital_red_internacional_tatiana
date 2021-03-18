@@ -15,6 +15,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { LoginComponent } from './login/login.component';
 import { NavbarinexComponent } from './shared/navbarinex/navbarinex.component';
 import { GuestComponent } from './layouts/guest/guest.component';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 @NgModule({
   imports: [
@@ -32,7 +33,8 @@ import { GuestComponent } from './layouts/guest/guest.component';
     AdminLayoutComponent,
     LoginComponent,
     NavbarinexComponent,
-    GuestComponent
+    GuestComponent,
+    CalculadoraComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

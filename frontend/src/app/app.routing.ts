@@ -13,6 +13,10 @@ const routes: Routes =[
     component: LoginComponent,
    },
    {
+    path: 'guest',
+    component: GuestComponent,
+   },
+   {
     path: 'admin',
     component: AdminLayoutComponent,
     children: [
@@ -20,6 +24,11 @@ const routes: Routes =[
     path: '',
     loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
 }]},
+{
+  path: '**',
+  redirectTo: '',
+  
+ },
 
    
 
