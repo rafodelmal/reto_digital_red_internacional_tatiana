@@ -32,16 +32,16 @@ public class UserController {
         return new ResponseEntity<User>(userRepository.save(user), HttpStatus.NO_CONTENT);
     }
 
-    @GetMapping
-    @RequestMapping("/prueba/{username}")
+  /*  @GetMapping
+    @RequestMapping("/guest")
     public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
         
         return new ResponseEntity<User>(userRepository.findByUsername(username), HttpStatus.ACCEPTED);
-    }
+    }*/
 
     @GetMapping
-    @RequestMapping("/prueba/{username}/{password}")
-    public ResponseEntity<User> getUserByUsernameAndPasword(@PathVariable String username, @PathVariable String password) {
+    @RequestMapping("/login")
+    public ResponseEntity<User> getUserByUsernameAndPasword(String username,String password) {
         
         return new ResponseEntity<User>(userRepository.findByUsernameAndPassword(username,password), HttpStatus.ACCEPTED);
     }
