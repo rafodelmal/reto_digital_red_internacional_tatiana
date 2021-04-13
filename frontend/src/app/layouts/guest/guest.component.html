@@ -12,15 +12,17 @@
         <form >
             <div class="centrado">
                <label for="inputUser">Usuario</label>
-                <input type="text" class="form-control" id="inputUser">
+               <input type="text" class="form-control" placeholder="Username" id="username" name="username"
+               [(ngModel)]="username">
                 <label for="inputPassword">Password</label>
-                <input type="password" class="form-control" id="inputPassword">
+                <input type="password" class="form-control" placeholder="Password" id="password" name="password"
+                    [(ngModel)]="password">
             </div>
             
             
            
           
-            <a href='#/admin' class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ingresar</a>
+            <a type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="login()">Ingresar</a>
          
           </form>
         </div>
