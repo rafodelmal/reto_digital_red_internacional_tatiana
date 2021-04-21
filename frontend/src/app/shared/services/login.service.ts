@@ -11,8 +11,9 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   getLogin<T>(username, password): Observable <T>{
-   
+   console.log(username);
+   console.log(password);
     return  this.http.get('http://localhost:8080/login?username='+username+'&password='+password).pipe(map((response)=>response as T));
-  console.log(Response)
+
   }
 }

@@ -13,18 +13,19 @@
             <div class="centrado">
                <label for="inputUser">Usuario</label>
                <input type="text" class="form-control" placeholder="Username" id="username" name="username"
-               [(ngModel)]="username">
+               [(ngModel)]="username" required>
                 <label for="inputPassword">Password</label>
                 <input type="password" class="form-control" placeholder="Password" id="password" name="password"
-                    [(ngModel)]="password">
+                    [(ngModel)]="password" required>
             </div>
             
             
            
           
-            <a type="submit" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="login()">Ingresar</a>
+            <a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="login()">Ingresar</a>
          
           </form>
         </div>
+      
 </section>
 <footer-cmp></footer-cmp>
