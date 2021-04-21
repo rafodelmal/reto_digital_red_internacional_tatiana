@@ -39,7 +39,7 @@ public class UserController {
         
         return new ResponseEntity<User>(userRepository.findByUsername(username), HttpStatus.ACCEPTED);
     }*/
-
+ // holi
     @GetMapping
     @RequestMapping("/login")
     public ResponseEntity<User> getUserByUsernameAndPasword(String username,String password) {
