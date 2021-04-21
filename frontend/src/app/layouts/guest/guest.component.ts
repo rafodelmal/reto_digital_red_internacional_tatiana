@@ -37,6 +37,7 @@ export class GuestComponent implements OnInit {
     else{
       this.respuesta = new Guest(data);
       this.router.navigate(['/admin']);
+      console.log(this.respuesta.id);
     }
      
     
