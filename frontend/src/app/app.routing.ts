@@ -7,6 +7,7 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { GuestComponent } from './layouts/guest/guest.component';
 import {LoginComponent} from './login/login.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
+import { SignComponent } from './sign/sign.component';
 const routes: Routes =[
   {
     path: '',
@@ -15,6 +16,10 @@ const routes: Routes =[
    {
     path: 'guest',
     component: GuestComponent,
+   },
+   {
+    path: 'sign',
+    component: SignComponent,
    },
    {
     path: 'admin',

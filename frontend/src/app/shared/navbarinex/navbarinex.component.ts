@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarinexComponent implements OnInit {
 
+  tittle : string = 'TripHost'
+
   constructor() { }
 
   ngOnInit(): void {

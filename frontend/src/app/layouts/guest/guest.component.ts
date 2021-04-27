@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { LoginService } from 'app/shared/services/login.service';
 import { Guest } from './guest';
 import { Router } from '@angular/router';
 import { isEmpty } from 'rxjs/operators';
+import Swal from 'sweetalert2';
 declare var $:any
 @Component({
   selector: 'app-guest',
@@ -10,8 +11,8 @@ declare var $:any
   styleUrls: ['./guest.component.css']
 })
 export class GuestComponent implements OnInit {
-  username: any
-  password: any
+  username: any;
+   password: any;
   showResult: boolean;
   respuesta: Guest; 
 
@@ -32,12 +33,18 @@ export class GuestComponent implements OnInit {
   
   this.service.getLogin(username,password).subscribe(data=>{
     if(data===null){
-      alert('Usuario no existe');
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Intentalo de nuevo o registrate!',
+        
+      })
     }
     else{
-      this.respuesta = new Guest(data);
-      this.router.navigate(['/admin']);
+      this.respuesta = new Guest(password, username);
+      this.router.navigate(['/admin/user']);
       console.log(this.respuesta.id)
+
     }
      
     
@@ -47,8 +54,5 @@ export class GuestComponent implements OnInit {
 
     
   }
-}
-function isObjectEmpty(arg0: any) {
-  throw new Error('Function not implemented.');
 }
 

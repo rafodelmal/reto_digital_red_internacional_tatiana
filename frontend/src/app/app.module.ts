@@ -16,6 +16,8 @@ import { LoginComponent } from './login/login.component';
 import { NavbarinexComponent } from './shared/navbarinex/navbarinex.component';
 import { GuestComponent } from './layouts/guest/guest.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { SignComponent } from './sign/sign.component';
+
 
 @NgModule({
   imports: [
@@ -34,7 +36,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
     LoginComponent,
     NavbarinexComponent,
     GuestComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    SignComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
