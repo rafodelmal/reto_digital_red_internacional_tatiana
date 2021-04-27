@@ -29,12 +29,12 @@ export class UserComponent implements OnInit {
   constructor(private service:LoginService, private datosLogin: LoginService) { }
 
   ngOnInit() {
-    let username, password
+    //let username, password
 
-    this.username=this.datosLogin.username;
-    this.password=this.datosLogin.password;
+    //this.username=this.datosLogin.username;
+    //this.password=this.datosLogin.password;
 
-    let respuesta: Guest;
+    //let respuesta: Guest;
 
    /* this.datosLogin.getLogin(usernameLogin, passwordLogin).subscribe(respuesta=>{
 

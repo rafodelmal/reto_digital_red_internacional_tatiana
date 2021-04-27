@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { LoginService } from 'app/shared/services/login.service';
 import { Guest } from './guest';
 import { Router } from '@angular/router';
@@ -41,10 +41,10 @@ export class GuestComponent implements OnInit {
       })
     }
     else{
-      this.respuesta = new Guest(password, username);
+      this.respuesta = new Guest(username, password);
       this.router.navigate(['/admin/user']);
-      console.log(this.respuesta.id)
-
+      console.log(this.respuesta.username)
+      
     }
      
     
