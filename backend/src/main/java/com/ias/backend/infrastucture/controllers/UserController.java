@@ -20,15 +20,16 @@ public class UserController {
         this.userRepository = _userRepository;
     }
     @PostMapping
-    public ResponseEntity<User> createUser(@RequestBody User user){
+    @RequestMapping("/sign")
+    public ResponseEntity<User> saveUser(@RequestBody User user){
         return new ResponseEntity<User>(userRepository.save(user), HttpStatus.CREATED);
     }
     @GetMapping
-    @RequestMapping
+  
     public ResponseEntity<Iterable<User>> getAllUser(){
         return new ResponseEntity<Iterable<User>>(userRepository.findAll(), HttpStatus.ACCEPTED);
     }
-  @PutMapping
+  @PutMapping("/update")
     public ResponseEntity<User> updateUser(@RequestBody User user){
         return new ResponseEntity<User>(userRepository.save(user), HttpStatus.NO_CONTENT);
     }
