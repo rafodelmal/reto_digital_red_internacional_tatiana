@@ -4,6 +4,9 @@ import { Guest } from './guest';
 import { Router } from '@angular/router';
 import { isEmpty } from 'rxjs/operators';
 import Swal from 'sweetalert2';
+import { stringify } from '@angular/compiler/src/util';
+
+
 declare var $:any
 @Component({
   selector: 'app-guest',
@@ -41,13 +44,14 @@ export class GuestComponent implements OnInit {
       })
     }
     else{
-      this.respuesta = new Guest(username, password);
+      this.respuesta = new Guest();
+      this.respuesta.login(username, password)
       this.router.navigate(['/admin/user']);
       console.log(this.respuesta.username)
       
     }
      
-    
+   
     
   }
     );

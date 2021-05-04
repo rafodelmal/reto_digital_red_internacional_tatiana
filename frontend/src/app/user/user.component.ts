@@ -4,7 +4,7 @@ import { LoginService } from 'app/shared/services/login.service';
 import Swal from 'sweetalert2';
 
 
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 
 
@@ -29,27 +29,19 @@ export class UserComponent implements OnInit {
   constructor(private service:LoginService, private datosLogin: LoginService) { }
 
   ngOnInit() {
-    //let username, password
-
-    //this.username=this.datosLogin.username;
-    //this.password=this.datosLogin.password;
-
-    //let respuesta: Guest;
-
-   /* this.datosLogin.getLogin(usernameLogin, passwordLogin).subscribe(respuesta=>{
-
-      respuesta.forEach(datos => {
-        this.name=datos.name
-        
-      });
-    })*/
+    this.username = this.service.username;
+    this.password = this.service.password;
+    
   }
   update(){
+    
+    this.username = this.service.username;
+    this.password = this.service.password;
     let username=this.username;
     let password=this.password;
     console.log(username)
   console.log(password)
-  let usuario = new Guest(username, password);
+  let usuario = new Guest();
   this.service.getLogin(username,password).subscribe(data=>{
     if(data!==null){
       console.log(usuario)

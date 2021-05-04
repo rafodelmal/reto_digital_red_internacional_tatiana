@@ -1,33 +1,24 @@
-<section id="pantalla-dividida" class="pantalla-dividida">
-    <div class="color">
-        <div class="texto">
-            <img src="/assets/img/logrotrip-removebg-preview.png" alt="">
-            <h1>TRIP HOST</h1>
-            <p>Registrate como Guest para que puedas disfrutar de nuestros servicios y disponer de un catalogo de maravillosos Host para que planees tus proximas vacaciones</p>
-         
+
+<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+    <div>TRIP<span>HOST</span></div>
+</div>
+<br>
+<div class="login">
+        <input type="text" placeholder="username" id="username" name="username"
+        [(ngModel)]="username" required><br>
+        <input type="password"placeholder="Password" id="password" name="password"
+        [(ngModel)]="password" required><br><br>
+        <div class="container">
+            <div class="row">
+                <a  class="btn btn-primary btn-sm btn-fill active" role="button" aria-pressed="true" (click)="sign()">Registrar</a>
+                <br><br>
+                <a href="#/guest" class="btn btn-default btn-sm active" role="button" aria-pressed="true" >Regresar</a>
+            </div>
         </div>
-    </div>
-    <div class="form">
-    <form >
-        <div class="centrado">
-           <label for="inputUser">Usuario</label>
-           <input type="text" class="form-control" placeholder="Username" id="username" name="username"
-           [(ngModel)]="username" required>
-            <label for="inputPassword">Password</label>
-            <input type="password" class="form-control" placeholder="Password" id="password" name="password"
-                [(ngModel)]="password" required>
-        </div>
-        <br>
         
-        <div>
-        <a  class="btn btn-primary btn-lg active" role="button" aria-pressed="true" (click)="sign()">Registrar</a>
-        </div>
-        <br>
-        <div>
-            <a href="#/sign">Registrate</a>
-         </div>
-     
-      </form>
-    </div>
-</section>
+        
+           
+
 

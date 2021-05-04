@@ -11,14 +11,14 @@ export class LoginService {
 
   constructor(private http:HttpClient) { }
 
- // @Output() datos : any;
+  @Output() datos : any;
   
-  //username: any;
-  //password: any;
+  username: any;
+  password: any;
 
   getLogin<T>(username, password): Observable <T>{
-   console.log(username);
-   console.log(password);
+   this.username=username;
+   this.password=password;
     return  this.http.get('http://localhost:8080/login?username='+username+'&password='+password).pipe(map((response)=>response as T));
 
   }

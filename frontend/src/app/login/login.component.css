@@ -8,7 +8,7 @@
     background-image:url(assets/img/happy-tourist-sightseeing-city-with-map.jpg);
     background-color: transparent;
     background-size: cover;
-    height: 100vh;
+    height: 90vh;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -22,7 +22,8 @@
     background-image: url(assets/img/family-moving-using-boxes.jpg);
     background-color: transparent;
     background-size: cover;
-   height: 100vh;
+    height: 90vh;
+    
     width: 50%;
     display: flex;
     justify-content: center;
