@@ -31,7 +31,7 @@ public class UserController {
     }
   @PutMapping("/update")
     public ResponseEntity<User> updateUser(@RequestBody User user){
-        return new ResponseEntity<User>(userRepository.save(user), HttpStatus.NO_CONTENT);
+        return new ResponseEntity<User  >(userRepository.save(user), HttpStatus.ACCEPTED);
     }
 
   /*  @GetMapping
