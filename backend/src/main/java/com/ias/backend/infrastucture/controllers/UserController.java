@@ -5,6 +5,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import ch.qos.logback.core.joran.conditional.IfAction;
+
 import com.ias.backend.domain.User;
 import com.ias.backend.repository.UserRepository;
 import org.springframework.http.MediaType;
@@ -24,6 +27,7 @@ public class UserController {
     public ResponseEntity<User> saveUser(@RequestBody User user){
         return new ResponseEntity<User>(userRepository.save(user), HttpStatus.CREATED);
     }
+
     @GetMapping
   
     public ResponseEntity<Iterable<User>> getAllUser(){
