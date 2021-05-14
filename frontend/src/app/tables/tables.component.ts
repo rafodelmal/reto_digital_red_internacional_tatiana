@@ -17,7 +17,7 @@ export class TablesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-      this.tableData1 = {
+     /* this.tableData1 = {
           headerRow: [ 'ID', 'Name', 'Country', 'City', 'Salary'],
           dataRows: [
               ['1', 'Dakota Rice', 'Niger', 'Oud-Turnhout', '$36,738'],
@@ -38,7 +38,7 @@ export class TablesComponent implements OnInit {
               ['5', 'Doris Greene', '$63,542', 'Malawi', 'Feldkirchen in Kärnten', ],
               ['6', 'Mason Porter', '$78,615', 'Chile', 'Gloucester' ]
           ]
-      };
+      };*/
   }
 
 }

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, Output } from '@angular/core';
-import { Guest } from 'app/layouts/guest/guest';
+import { Guest } from 'app/guest/guest';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -16,10 +16,10 @@ export class LoginService {
   username: any;
   password: any;
 
-  getLogin<T>(username, password): Observable <T>{
+  getLogin<Guest>(username, password): Observable <Guest>{
    this.username=username;
    this.password=password;
-    return  this.http.get('http://localhost:8080/login?username='+username+'&password='+password).pipe(map((response)=>response as T));
+    return  this.http.get('http://localhost:8080/login?username='+username+'&password='+password).pipe(map((response)=>response as Guest));
 
   }
 

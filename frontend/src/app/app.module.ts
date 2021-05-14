@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarinexComponent } from './shared/navbarinex/navbarinex.component';
-import { GuestComponent } from './layouts/guest/guest.component';
+import { GuestComponent } from './guest/guest.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { SignComponent } from './sign/sign.component';
 

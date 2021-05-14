@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-navbarinex',
@@ -7,11 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarinexComponent implements OnInit {
 
-  tittle : string = 'TripHost'
+  usuarioLogueado = false;
 
-  constructor() { }
+
+  constructor(public authService: AuthService, public router: Router) { }
 
   ngOnInit(): void {
+    this.usuarioLogueado = this.authService.isLoggedIn('');
+    this.authService.changeLoginStatus$.subscribe((loggedStatus: boolean)=>{
+      this.usuarioLogueado = loggedStatus;
+    })
+  }
+
+  logout(){
+    this.authService.logout();
+    this.router.navigate(['/guest']);
   }
 
 }

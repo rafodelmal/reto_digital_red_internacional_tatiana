@@ -4,14 +4,16 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { GuestComponent } from './layouts/guest/guest.component';
+import { GuestComponent } from './guest/guest.component';
 import {LoginComponent} from './login/login.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import { SignComponent } from './sign/sign.component';
+import { CanActiveGuard } from './can-active.guard';
 const routes: Routes =[
   {
     path: '',
-    component: LoginComponent,
+    component: GuestComponent,
+    
    },
    {
     path: 'guest',
@@ -23,12 +25,17 @@ const routes: Routes =[
    },
    {
     path: 'admin',
-    component: AdminLayoutComponent,
+    component: AdminLayoutComponent, canActivate: [CanActiveGuard],
     children: [
       {
     path: '',
-    loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
+    loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule', 
+     
 }]},
+{
+  path: 'admin/user',
+  component: AdminLayoutComponent, canActivate: [CanActiveGuard],
+ },
 {
   path: '**',
   redirectTo: '',

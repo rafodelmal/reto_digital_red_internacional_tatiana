@@ -1,4 +1,3 @@
-
 <div class="body"></div>
 <div class="grad"></div>
 <div class="header">
@@ -6,10 +5,24 @@
 </div>
 <br>
 <div class="login">
-        <input type="text" placeholder="username" id="username" name="username"
-        [(ngModel)]="username" required><br>
-        <input type="password"placeholder="Password" id="password" name="password"
-        [(ngModel)]="password" required><br><br>
+    <div>Crea tu cuenta</div>
+    <input type="text" placeholder="username" id="username" name="username" [(ngModel)]="username" required><br>
+    <input type="password" placeholder="Password" id="password" name="password" [(ngModel)]="password" required><br><br>
+    <input type="text" placeholder="Nombre Completo" id="name" name="name" [(ngModel)]="name" required><br><br>
+    <input type="text" placeholder="Pais" id="usercountry" name="usercountry" [(ngModel)]="usercountry" required><br><br>
+    <input type="text" placeholder="Ciudad" id="usercity" name="usercity" [(ngModel)]="usercity" required><br><br>
+    <input type="text" placeholder="Direccion" id="adress" name="address" [(ngModel)]="address"><br><br>
+    <div class="col-auto form-row align-items-center">
+        <select class="form-control" id="rol" name="rol"  [(ngModel)]="rol" >
+            <option value="1">Guest Viajero</option>
+            <option value="2">Host Hospedador</option>
+            <option value="3" selected>Guest y Host</option>
+        </select>
+    </div>
+
+<br><br>
+       
+        
         <div class="container">
             <div class="row">
                 <a  class="btn btn-primary btn-sm btn-fill active" role="button" aria-pressed="true" (click)="sign()">Registrar</a>
@@ -17,7 +30,6 @@
                 <a href="#/guest" class="btn btn-default btn-sm active" role="button" aria-pressed="true" >Regresar</a>
             </div>
         </div>
-        
         
            
 
