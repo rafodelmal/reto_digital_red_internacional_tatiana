@@ -16,6 +16,12 @@ export class Guest {
         this.password=password;
     }
 
+    roluser(username: string, password: string, rol: number){
+        this.username=username;
+        this.password=password;
+        this.rol=rol;
+    }
+
     create(username: string, password: string, name: string, usercountry: string, usercity: string, address: string, rol: number){
         this.username=username;
         this.password=password;

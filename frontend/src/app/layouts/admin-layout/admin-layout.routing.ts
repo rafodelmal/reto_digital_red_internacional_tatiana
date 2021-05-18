@@ -9,6 +9,7 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { CalculadoraComponent } from '../../calculadora/calculadora.component';
+import { HouseComponent } from 'app/house/house.component';
 
 export const AdminLayoutRoutes: Routes = [
  
@@ -21,5 +22,5 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'calculadora',    component: CalculadoraComponent },
-    { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'house',          component: HouseComponent },
 ];

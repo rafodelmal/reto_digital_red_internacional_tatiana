@@ -17,7 +17,7 @@ export const ROUTES: RouteInfo[] = [
     //{ path: '/admin/maps', title: 'Maps',  icon:'pe-7s-map-marker', class: '' },
     //{ path: '/admin/notifications', title: 'Notifications',  icon:'pe-7s-bell', class: '' },
     //{ path: '/admin/calculadora', title: 'Calculadora',  icon:'pe-7s-calculator', class: '' },
-    { path: '/sign', title: 'Quiero Ofrecer mi casa',  icon:'pe-7s-rocket', class: 'active-pro' },
+    { path: 'house', title: 'Quiero Ofrecer mi casa',  icon:'pe-7s-rocket', class: 'active-pro' },
 ];
 
 @Component({

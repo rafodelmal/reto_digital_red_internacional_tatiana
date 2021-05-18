@@ -1,0 +1,28 @@
+<div>
+    <div class="body"></div>
+    <div class="grad"></div>
+    <div class="header">
+        <div>TRIP<span>HOST</span></div>
+    </div>
+    <br>
+    <div class="login">
+        <div>
+            <h3 style="color: white;">Información para publicar tu casa como Host</h3>
+        </div>
+        <div class="col-auto form-row align-items-center">
+            <select class="form-control" id="available" name="available"  [(ngModel)]="available" >
+                <option value="true">Disponible</option>
+                <option value="false">Ocupada</option>
+            </select>
+        </div>
+        <input type="text" class="form-control invisible" value="{{username}}" id="username" name="username" [(ngModel)]="username" required>
+        <input type="text" class="form-control invisible" value="{{idhouse}}" id="idehouse" name="idhouse" [(ngModel)]="idhouse" required>
+                                   
+        <input type="text" placeholder="Telefono de Contacto" id="phone" name="phone" [(ngModel)]="phone" required><br>
+        <input type="text" placeholder="Pais" id="housecountry" name="housecountry" [(ngModel)]="housecountry" required><br><br>
+        <input type="text" placeholder="Ciudad" id="housecity" name="housecity" [(ngModel)]="housecity" required><br><br>
+        <input type="text" placeholder="Direccion" id="houseadress" name="houseaddress" [(ngModel)]="houseaddress"><br><br>
+        <a class="btn btn-primary btn-md btn-fill" role="button" aria-pressed="true"  (click)="public()">Publicar mi Casa</a>
+        <a class="btn btn-sucess btn-md btn-fill" role="button" aria-pressed="true" (click)="uploadHouse()">Actualizar Datos</a>
+     
+     </div>

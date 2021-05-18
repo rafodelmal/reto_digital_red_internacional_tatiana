@@ -17,6 +17,7 @@ import { NavbarinexComponent } from './shared/navbarinex/navbarinex.component';
 import { GuestComponent } from './guest/guest.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { SignComponent } from './sign/sign.component';
+import { HouseComponent } from './house/house.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { SignComponent } from './sign/sign.component';
     NavbarinexComponent,
     GuestComponent,
     CalculadoraComponent,
-    SignComponent
+    SignComponent,
+    HouseComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

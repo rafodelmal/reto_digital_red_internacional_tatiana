@@ -7,5 +7,8 @@ export interface User {
     usercity: string;
     address: string;
     rol: number;
+    idhouse: number;
+
+    
 
 }

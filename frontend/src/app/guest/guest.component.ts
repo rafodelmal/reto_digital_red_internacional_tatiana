@@ -19,6 +19,7 @@ export class GuestComponent implements OnInit {
   password: any;
   showResult: boolean;
   respuesta: Guest;
+  rol:  any;
 
   constructor(private router: Router, private service: LoginService, private authService: AuthService) { }
 
@@ -36,12 +37,17 @@ export class GuestComponent implements OnInit {
     //console.log('prueba');
     let username = this.username;
     let password = this.password;
-    let answer = 0
+    let answer
+    let rol
+
+    
 
     console.log(username);
     console.log(password);
 
     this.service.getLogin(username, password).subscribe(data => {
+      
+     console.log('este objeto llega data'+data)
       if (data === null) {
         Swal.fire({
           icon: 'error',
@@ -51,23 +57,37 @@ export class GuestComponent implements OnInit {
         })
       }
       else {
+      
         this.authService.login();
         this.routeRedirect = this.authService.urlUsuarioIntentAcceder;
         this.authService.urlUsuarioIntentAcceder = '';
         this.router.navigate([this.routeRedirect]);
-        this.respuesta = new Guest();
-        this.respuesta.login(username, password)
-        this.router.navigate(['/admin/user']);
-        console.log(this.respuesta.username)
 
+        console.log(data[0])
+        if(data[4]===2){
+          
+          this.respuesta = new Guest();
+          this.respuesta.roluser(username, password,rol)
+          this.router.navigate(['/admin/dashboard']);
+            console.log(this.respuesta.username)
+
+        
+        console.log('el rol es'+this.respuesta.username)
+        
+        }
+        else{
+       
+        this.router.navigate(['/admin/dashboard']);
+          console.log(this.respuesta.username)
+        }
       }
 
-
+    })
 
     }
-    );
-
-
+   
   }
-}
+
+  
+
 

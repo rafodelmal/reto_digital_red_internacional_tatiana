@@ -9,6 +9,7 @@ import {LoginComponent} from './login/login.component';
 import {SidebarComponent} from './sidebar/sidebar.component';
 import { SignComponent } from './sign/sign.component';
 import { CanActiveGuard } from './can-active.guard';
+import { HouseComponent } from './house/house.component';
 const routes: Routes =[
   {
     path: '',
@@ -24,6 +25,10 @@ const routes: Routes =[
     component: SignComponent,
    },
    {
+    path: 'house',
+    component: HouseComponent,
+   },
+   {
     path: 'admin',
     component: AdminLayoutComponent, canActivate: [CanActiveGuard],
     children: [
@@ -36,6 +41,9 @@ const routes: Routes =[
   path: 'admin/user',
   component: AdminLayoutComponent, canActivate: [CanActiveGuard],
  },
+ {path: 'admin/house',
+ component: HouseComponent, canActivate: [CanActiveGuard],
+},
 {
   path: '**',
   redirectTo: '',
