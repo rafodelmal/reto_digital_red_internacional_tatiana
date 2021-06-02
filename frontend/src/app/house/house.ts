@@ -5,7 +5,8 @@ export class House {
     housecountry:    string;
     housecity: string;
     houseaddress: string;
-    available: boolean;
+    available: number;
+    photo: string;
     constructor(){
        
     }
@@ -17,12 +18,13 @@ export class House {
     }
     
 
-    create(username: string, phone: number, housecountry: string, housecity: string, houseaddress: string, available: boolean){
+    create(username: string, phone: number, housecountry: string, housecity: string, houseaddress: string, available: number, photo: string){
         this.username=username;
         this.phone=phone;
         this.housecountry=housecountry;
         this.housecity=housecity;
         this.houseaddress=houseaddress;
         this.available=available;
+        this.photo=photo;
     }
 }

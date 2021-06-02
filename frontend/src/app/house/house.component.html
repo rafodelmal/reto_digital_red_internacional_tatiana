@@ -1,7 +1,10 @@
+
 <div>
+    
     <div class="body"></div>
     <div class="grad"></div>
     <div class="header">
+        
         <div>TRIP<span>HOST</span></div>
     </div>
     <br>
@@ -11,8 +14,8 @@
         </div>
         <div class="col-auto form-row align-items-center">
             <select class="form-control" id="available" name="available"  [(ngModel)]="available" >
-                <option value="true">Disponible</option>
-                <option value="false">Ocupada</option>
+                <option value=1>Disponible</option>
+                <option value=0>Ocupada</option>
             </select>
         </div>
         <input type="text" class="form-control invisible" value="{{username}}" id="username" name="username" [(ngModel)]="username" required>
@@ -22,6 +25,7 @@
         <input type="text" placeholder="Pais" id="housecountry" name="housecountry" [(ngModel)]="housecountry" required><br><br>
         <input type="text" placeholder="Ciudad" id="housecity" name="housecity" [(ngModel)]="housecity" required><br><br>
         <input type="text" placeholder="Direccion" id="houseadress" name="houseaddress" [(ngModel)]="houseaddress"><br><br>
+        <input type="text" placeholder="URL Foto" id="photo" name="photo" [(ngModel)]="photo"><br><br>
         <a class="btn btn-primary btn-md btn-fill" role="button" aria-pressed="true"  (click)="public()">Publicar mi Casa</a>
         <a class="btn btn-sucess btn-md btn-fill" role="button" aria-pressed="true" (click)="uploadHouse()">Actualizar Datos</a>
      

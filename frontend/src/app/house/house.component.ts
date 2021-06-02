@@ -11,13 +11,14 @@ import { House } from './house';
   styleUrls: ['./house.component.css']
 })
 export class HouseComponent implements OnInit {
-  available: boolean;
+  available: any;
   phone: any;
   housecountry: any;
   housecity: any;
   houseaddress: any;
   username: any;
   idhouse: any;
+  photo: any;
   respuesta: House;
   tipo: boolean = true;
   tipo1: boolean = true;
@@ -27,7 +28,7 @@ export class HouseComponent implements OnInit {
     let respuesta;
     let username = this.service.username
     let password = this.service.password;
-    this.service.getHouse(username).subscribe(data => {
+   this.service.getHouse(username).subscribe(data => {
       respuesta=data;
       if(data===null){
   
@@ -41,8 +42,9 @@ export class HouseComponent implements OnInit {
       this.housecity=usuario.usercity;
       this.houseaddress=usuario.address;
       
+      
       });
-    }
+      }  
     else{
       
       var casa: House;
@@ -54,6 +56,7 @@ export class HouseComponent implements OnInit {
       this.housecountry=casa.housecountry;
       this.housecity=casa.housecity;
       this.houseaddress=casa.houseaddress;
+      this.photo=casa.photo;
       
     } 
     
@@ -68,8 +71,9 @@ export class HouseComponent implements OnInit {
     let housecity = this.housecity;
     let houseaddress = this.houseaddress;
     let available = this.available;
+    let photo = this.photo;
    
-    if (this.phone === undefined || this.housecountry === undefined || this.housecity === undefined || this.houseaddress === undefined || this.available === undefined) {
+    if (this.phone === undefined || this.housecountry === undefined || this.housecity === undefined || this.houseaddress === undefined || this.available === undefined || this.photo === undefined) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -80,9 +84,10 @@ export class HouseComponent implements OnInit {
     else {
 
      let casa = new House();
-      casa.create(username, phone, housecountry, housecity, houseaddress, available)
+      casa.create(username, phone, housecountry, housecity, houseaddress, available, photo)
       casa.login(username)
-      this.service.getHouse(username).subscribe(data => {
+      console
+     this.service.getHouse(username).subscribe(data => {
         if (data === null) {
           console.log(casa)
           this.service.saveHouse(casa).subscribe(data => {
@@ -125,6 +130,7 @@ export class HouseComponent implements OnInit {
     let housecity = this.housecity;
     let houseaddress = this.houseaddress;
     let available = this.available;
+    let photo = this.photo
     console.log(username)
     
     let casa = new House();
@@ -135,6 +141,7 @@ export class HouseComponent implements OnInit {
     casa.housecity=housecity;
     casa.houseaddress=houseaddress;
     casa.available=available;
+    casa.photo=photo;
     console.log(casa);
     console.log(casa.idhouse);
     this.service.getHouse(username).subscribe(data => {

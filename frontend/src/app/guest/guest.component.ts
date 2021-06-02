@@ -48,7 +48,7 @@ export class GuestComponent implements OnInit {
     console.log(password);
 
     this.service.getLogin(username, password).subscribe(data => {
-       
+      this.respuesta=data; 
      
        console.log('esta es la resouesta login'+this.respuesta)
       if (data === null) {

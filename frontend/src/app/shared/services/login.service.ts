@@ -16,6 +16,9 @@ export class LoginService {
   
   username: any;
   password: any;
+  housecity: any;
+  housecountry: any;
+  available: any;
 
   getLogin<Guest>(username, password): Observable <Guest>{
    this.username=username;
@@ -30,6 +33,29 @@ export class LoginService {
      return  this.http.get('http://localhost:8080/host?username='+username).pipe(map((response)=>response as House));
  
    }
+
+   getHouseAvailable<House>(available): Observable <House>{
+    available=1;
+    
+     return  this.http.get('http://localhost:8080/searchAvailable?available='+available).pipe(map((response)=>response as House));
+ 
+   }
+
+   getAllHouses<House>(): Observable <House>{
+    
+    
+     return  this.http.get('http://localhost:8080/search').pipe(map((response)=>response as House));
+ 
+   }
+ /*  getHouses<House>(housecity, housecountry, available): Observable <House>{
+    this.housecity=housecity;
+    this.housecountry=housecountry;
+    this.available=available;*/
+
+    
+    // return  this.http.get('http://localhost:8080/host?username='+username).pipe(map((response)=>response as House));
+ 
+  // }
 
   saveUser(usuario: Guest): Observable<any>{
     console.log("llega al service:", usuario)

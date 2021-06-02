@@ -16,21 +16,22 @@
     </div>
     <br>
     <br>
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3" style="max-width: 540px;" *ngFor="let house of houses">
         <div class="row no-gutters">
-          <div class="col-md-8">
-            <img src="assets/img/casa1.jpg" alt="...">
+          <div class="col-md-8" >
+            <img src="{{house.photo}}" alt="..." class="photo">
           </div>
           <div class="col-md-4">
             <div class="card-body">
-              <h5 class="card-title">Medellin</h5>
-              <p class="card-text">Especial lugar donde puedes hospedarte como en casa</p>
+              <h5 class="card-title">{{house.housecountry}}</h5>
+              <p class="card-text">{{house.housecity}}</p>
+              <p class="card-text">{{house.houseaddress}}</p>
               <a href="#"><small class="text-muted">Contactate con el Host</small></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="card mb-3" style="max-width: 540px;">
+      <!--<div class="card mb-3" style="max-width: 540px;">
         <div class="row no-gutters">
           <div class="col-md-8">
             <img src="assets/img/casa2.jpg" alt="...">
@@ -43,7 +44,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 </div>
 
 

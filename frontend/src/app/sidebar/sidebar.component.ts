@@ -32,11 +32,11 @@ export const ROUTESHOST: RouteInfo[] = [
 ]
 
 export const ROUTES: RouteInfo[] = [
-  { path: '/admin/dashboard', title: 'Bienvenido Portal FULL',  icon: 'pe-7s-home', class: '' },
-  { path: '/admin/dashboard', title: 'Buscar',  icon: 'pe-7s-home', class: '' },
+  { path: '/admin/dashboard', title: 'Bienvenido Portal FULL    Buscar',  icon: 'pe-7s-home', class: '' },
+ // { path: '/admin/dashboard', title: 'Buscar',  icon: 'pe-7s-home', class: '' },
   { path: '/admin/user', title: 'Tu Perfil',  icon:'pe-7s-id', class: '' },
   { path: '/admin/table', title: 'Historial',  icon:'pe-7s-note2', class: '' },
-  { path: 'house', title: 'Quiero Ofrecer mi casa',  icon:'pe-7s-rocket', class: 'active-pro' },
+  { path: '/admin/house', title: 'Quiero Ofrecer mi casa',  icon:'pe-7s-rocket', class: 'active-pro' },
 
 ]
 
@@ -58,7 +58,7 @@ export class SidebarComponent implements OnInit {
       respuesta=data;
       var usuario: Guest;
       usuario=respuesta;
-      console.log(usuario.rol)
+      console.log('este es el rol de la vista'+usuario.rol)
       if(usuario.rol==1){
     this.menuItems = ROUTESGUEST.filter(menuItem => menuItem);
       }

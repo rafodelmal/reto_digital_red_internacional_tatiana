@@ -50,6 +50,7 @@ export class SignComponent implements OnInit {
       usuario.create(username, password, name, usercountry, usercity, address, rol)
       usuario.login(username, password)
       this.service.getLogin(username, password).subscribe(data => {
+        console.log('prueba que llega al data'+data);
         if (data === null) {
           console.log(usuario)
           this.service.saveUser(usuario).subscribe(data => {
