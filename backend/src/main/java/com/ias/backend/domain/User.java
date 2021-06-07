@@ -10,13 +10,21 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column
     private int id;
+    @Column
     private String username;
+    @Column
     private String password;
+    @Column
     private String name;
+    @Column
     private String usercountry;
+    @Column
     private String usercity;
+    @Column
     private String address;
+    @Column
     private int rol;
     public int getId() {
         return id;

@@ -18,6 +18,7 @@ import { GuestComponent } from './guest/guest.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { SignComponent } from './sign/sign.component';
 import { HouseComponent } from './house/house.component';
+import { ReserveComponent } from './reserve/reserve.component';
 
 
 @NgModule({
@@ -39,7 +40,7 @@ import { HouseComponent } from './house/house.component';
     GuestComponent,
     CalculadoraComponent,
     SignComponent,
-    HouseComponent
+    ReserveComponent,  
   ],
   providers: [],
   bootstrap: [AppComponent]
