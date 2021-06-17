@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { House } from 'app/house/house';
 import { LoginService } from 'app/shared/services/login.service';
 
@@ -14,8 +15,9 @@ export class HomeComponent implements OnInit {
   available: any;
   photo: any
   houses: any;
+  idhouse: any;
     
-  constructor(private service: LoginService) { }
+  constructor(private service: LoginService, private router: Router) { }
 
   ngOnInit() {
     this.service.getHouseAvailable(1).subscribe(data => {
@@ -32,8 +34,14 @@ export class HomeComponent implements OnInit {
   let available=1;
   
   this.service.getHouseAvailable(available)
-
-  
   }
+  
+  housereserve(house2){
+  /*var idcasa = document.getElementById("idhouse");*/
+  console.log('este es el id house cuando hago click es : '+house2)
+ this.service.getIdHouse(house2)
+  this.router.navigate(['/admin/reserve']);
+  }
+  
 
 }

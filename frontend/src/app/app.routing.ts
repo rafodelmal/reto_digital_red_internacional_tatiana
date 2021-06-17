@@ -10,6 +10,7 @@ import {SidebarComponent} from './sidebar/sidebar.component';
 import { SignComponent } from './sign/sign.component';
 import { CanActiveGuard } from './can-active.guard';
 import { HouseComponent } from './house/house.component';
+import { ReserveComponent } from './reserve/reserve.component';
 const routes: Routes =[
   {
     path: '',
@@ -29,6 +30,10 @@ const routes: Routes =[
     component: HouseComponent,
    },
    {
+    path: 'reserve',
+    component: ReserveComponent,
+   },
+   {
     path: 'admin',
     component: AdminLayoutComponent, canActivate: [CanActiveGuard],
     children: [
@@ -41,6 +46,10 @@ const routes: Routes =[
   path: 'admin/user',
   component: AdminLayoutComponent, canActivate: [CanActiveGuard],
  },
+ {
+ path: 'admin/reserve',
+ component: ReserveComponent, canActivate: [CanActiveGuard],
+},
  {path: 'admin/house',
  component: HouseComponent, canActivate: [CanActiveGuard],
 },

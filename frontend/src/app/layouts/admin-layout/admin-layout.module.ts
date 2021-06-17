@@ -17,6 +17,7 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { HouseComponent } from 'app/house/house.component';
+import { ReserveComponent } from 'app/reserve/reserve.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { HouseComponent } from 'app/house/house.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    HouseComponent
+    HouseComponent,
+    ReserveComponent
   ]
 })
 

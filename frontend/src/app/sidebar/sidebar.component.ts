@@ -54,7 +54,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
     let respuesta;
-    let username = this.service.username
+    let username = this.service.usernamelogin
     let password = this.service.password;
     this.service.getLogin(username, password).subscribe(data => {
       respuesta=data;

@@ -19,6 +19,8 @@ import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { SignComponent } from './sign/sign.component';
 import { HouseComponent } from './house/house.component';
 import { ReserveComponent } from './reserve/reserve.component';
+import { LoginService } from './shared/services/login.service';
+import { AuthService } from './shared/services/auth.service';
 
 
 @NgModule({
@@ -40,9 +42,8 @@ import { ReserveComponent } from './reserve/reserve.component';
     GuestComponent,
     CalculadoraComponent,
     SignComponent,
-    ReserveComponent,  
-  ],
-  providers: [],
+    ],
+  providers: [LoginService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

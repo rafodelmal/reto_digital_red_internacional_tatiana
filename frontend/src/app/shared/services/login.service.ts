@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, Output } from '@angular/core';
 import { Guest } from 'app/guest/guest';
 import { House } from 'app/house/house';
+import { Reserve } from 'app/reserve/reserve';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -19,11 +20,14 @@ export class LoginService {
   housecity: any;
   housecountry: any;
   available: any;
+  name: any;
+  idhouse: any;
+  usernamelogin: any;
 
-  getLogin<Guest>(username, password): Observable <Guest>{
-   this.username=username;
+  getLogin<Guest>(usernamelogin, password): Observable <Guest>{
+   this.usernamelogin=usernamelogin;
    this.password=password;
-    return  this.http.get('http://localhost:8080/login?username='+username+'&password='+password).pipe(map((response)=>response as Guest));
+    return  this.http.get('http://localhost:8080/login?username='+usernamelogin+'&password='+password).pipe(map((response)=>response as Guest));
 
   }
 
@@ -34,6 +38,18 @@ export class LoginService {
  
    }
 
+   getHousebyId<House>(idhouse): Observable <House>{
+    this.idhouse=idhouse;
+    
+     return  this.http.get('http://localhost:8080/hostid?idhouse='+idhouse).pipe(map((response)=>response as House));
+ 
+   }
+   getUser<User>(username): Observable <User>{
+    this.username=username;
+    
+     return  this.http.get('http://localhost:8080/guest?username='+username).pipe(map((response)=>response as User));
+ 
+   }
    getHouseAvailable<House>(available): Observable <House>{
     available=1;
     
@@ -56,6 +72,13 @@ export class LoginService {
     // return  this.http.get('http://localhost:8080/host?username='+username).pipe(map((response)=>response as House));
  
   // }
+
+  getIdHouse(idhouse){
+    this.idhouse=idhouse;
+
+  }
+
+ 
 
   saveUser(usuario: Guest): Observable<any>{
     console.log("llega al service:", usuario)
@@ -100,4 +123,16 @@ export class LoginService {
     return this.http.post('http://localhost:8080/public', body, {'headers':headers})
 
   }
+
+  saveReserve(reserva: Reserve): Observable<any>{
+    console.log("llega al service:", reserva)
+
+    const headers =  { 'content-type': 'application/json'};
+    const body = JSON.stringify(reserva);
+    console.log(headers," ", body)
+
+    return this.http.post('http://localhost:8080/reservehouse', body, {'headers':headers})
+
+  }
+
 }
