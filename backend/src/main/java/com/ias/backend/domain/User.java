@@ -1,80 +1,128 @@
 package com.ias.backend.domain;
 
-import lombok.Data;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-import javax.persistence.*;
 
 @Entity
-@Table(name = "usuario_taty")
-@Data
+@Table(name = "usuarios")
 public class User {
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column
-    private int id;
-    @Column
+     private int id;
+    
     private String username;
-    @Column
     private String password;
-    @Column
     private String name;
-    @Column
-    private String usercountry;
-    @Column
-    private String usercity;
-    @Column
+
+    @Column(name="user_country")
+    private String userCountry;
+
+    @Column(name="user_city")
+    private String userCity;
+    
     private String address;
-    @Column
     private int rol;
+    
+  
+
     public int getId() {
         return id;
     }
+
+
+
     public void setId(int id) {
         this.id = id;
     }
+
+
+
     public String getUsername() {
         return username;
     }
+
+
+
     public void setUsername(String username) {
         this.username = username;
     }
+
+
+
     public String getPassword() {
         return password;
     }
+
+
+
     public void setPassword(String password) {
         this.password = password;
     }
+
+
+
     public String getName() {
         return name;
     }
+
+
+
     public void setName(String name) {
         this.name = name;
     }
-    public String getUsercountry() {
-        return usercountry;
+
+
+
+    public String getUserCountry() {
+        return userCountry;
     }
-    public void setUsercountry(String usercountry) {
-        this.usercountry = usercountry;
+
+
+
+    public void setUserCountry(String userCountry) {
+        this.userCountry = userCountry;
     }
-    public String getUsercity() {
-        return usercity;
+
+
+
+    public String getUserCity() {
+        return userCity;
     }
-    public void setUsercity(String usercity) {
-        this.usercity = usercity;
+
+
+
+    public void setUserCity(String userCity) {
+        this.userCity = userCity;
     }
+
+
+
     public String getAddress() {
         return address;
     }
+
+
+
     public void setAddress(String address) {
         this.address = address;
     }
+
+
+
     public int getRol() {
         return rol;
     }
+
+
+
     public void setRol(int rol) {
         this.rol = rol;
     }
-
-    
-    
+  
 }
